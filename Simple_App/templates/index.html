@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }}</title>
+    <script src="/public/scripts/index.js" defer></script>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+</head>
+
+<body>
+    <h1>{{ .title }}</h1>
+
+    <h2>Create Car</h2>
+    <form id="addForm" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Car ID</td>
+                <td><input id="carId" name="carId" type="text" required /></td>
+            </tr>
+            <tr>
+                <td>Make</td>
+                <td><input id="make" name="make" type="text" required /></td>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td><input id="model" name="model" type="text" required /></td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td><input id="color" name="color" type="text" required /></td>
+            </tr>
+            <tr>
+                <td>Date of Manufacture</td>
+                <td><input id="dateOfManufacture" name="dateOfManufacture" type="date" required /></td>
+            </tr>
+            <tr>
+                <td>Manufacturer Name</td>
+                <td><input id="manufacturerName" name="manufacturerName" type="text" required /></td>
+            </tr>
+            <tr>
+                <td>Upload File</td>
+                <td><input id="file" name="file" type="file" required /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Create Car</button>
+                    <button type="reset">Clear</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>Query Car</h2>
+    <form id="readForm">
+        <table>
+            <tr>
+                <td>Enter Car ID</td>
+                <td><input id="carIdInput" name="carIdInput" type="text" required /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Query Car</button>
+                    <button type="reset">Clear</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="queryResult"></div>
+</body>
+
+</html>
